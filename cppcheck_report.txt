@@ -1,0 +1,101 @@
+src/fe.c:624:3: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+  ctx->calllist = &cl;
+  ^
+src/fe.c:382:50: warning: The address of local variable 'c' might be accessed at non-zero index. [objectIndex]
+        for (i = 0; i < STRBUFSIZE && strbuf(obj)[i]; i++) {
+                                                 ^
+src/fe.c:382:39: note: Address of variable taken here.
+        for (i = 0; i < STRBUFSIZE && strbuf(obj)[i]; i++) {
+                                      ^
+src/fe.c:382:50: note: The address of local variable 'c' might be accessed at non-zero index.
+        for (i = 0; i < STRBUFSIZE && strbuf(obj)[i]; i++) {
+                                                 ^
+src/fe.c:383:32: warning: The address of local variable 'c' might be accessed at non-zero index. [objectIndex]
+          if (qt && strbuf(obj)[i] == '"') { fn(ctx, udata, '\\'); }
+                               ^
+src/fe.c:383:21: note: Address of variable taken here.
+          if (qt && strbuf(obj)[i] == '"') { fn(ctx, udata, '\\'); }
+                    ^
+src/fe.c:383:32: note: The address of local variable 'c' might be accessed at non-zero index.
+          if (qt && strbuf(obj)[i] == '"') { fn(ctx, udata, '\\'); }
+                               ^
+src/fe.c:384:37: warning: The address of local variable 'c' might be accessed at non-zero index. [objectIndex]
+          fn(ctx, udata, strbuf(obj)[i]);
+                                    ^
+src/fe.c:384:26: note: Address of variable taken here.
+          fn(ctx, udata, strbuf(obj)[i]);
+                         ^
+src/fe.c:384:37: note: The address of local variable 'c' might be accessed at non-zero index.
+          fn(ctx, udata, strbuf(obj)[i]);
+                                    ^
+src/fe.c:114:8: style: The scope of the variable 'buf' can be reduced. [variableScope]
+  char buf[64];
+       ^
+src/fe.c:615:85: style:inconclusive: Function 'eval' argument 4 names different: declaration 'bind' definition 'newenv'. [funcArgNamesDifferent]
+static fe_Object* eval(fe_Context *ctx, fe_Object *obj, fe_Object *env, fe_Object **newenv) {
+                                                                                    ^
+src/fe.c:558:85: note: Function 'eval' argument 4 names different: declaration 'bind' definition 'newenv'.
+static fe_Object* eval(fe_Context *ctx, fe_Object *obj, fe_Object *env, fe_Object **bind);
+                                                                                    ^
+src/fe.c:615:85: note: Function 'eval' argument 4 names different: declaration 'bind' definition 'newenv'.
+static fe_Object* eval(fe_Context *ctx, fe_Object *obj, fe_Object *env, fe_Object **newenv) {
+                                                                                    ^
+src/fe.c:853:14: style: The scope of the variable 'obj' can be reduced. [variableScope]
+  fe_Object *obj;
+             ^
+src/fe.c:94:10: style: Local variable 'buf' shadows outer variable [shadowVariable]
+    char buf[64];
+         ^
+src/fe.c:842:13: note: Shadowed declaration
+static char buf[64000];
+            ^
+src/fe.c:94:10: note: Shadow variable
+    char buf[64];
+         ^
+src/fe.c:114:8: style: Local variable 'buf' shadows outer variable [shadowVariable]
+  char buf[64];
+       ^
+src/fe.c:842:13: note: Shadowed declaration
+static char buf[64000];
+            ^
+src/fe.c:114:8: note: Shadow variable
+  char buf[64];
+       ^
+src/fe.c:347:8: style: Local variable 'buf' shadows outer variable [shadowVariable]
+  char buf[32];
+       ^
+src/fe.c:842:13: note: Shadowed declaration
+static char buf[64000];
+            ^
+src/fe.c:347:8: note: Shadow variable
+  char buf[32];
+       ^
+src/fe.c:461:8: style: Local variable 'buf' shadows outer variable [shadowVariable]
+  char buf[64], *p;
+       ^
+src/fe.c:842:13: note: Shadowed declaration
+static char buf[64000];
+            ^
+src/fe.c:461:8: note: Shadow variable
+  char buf[64], *p;
+       ^
+src/fe.c:305:0: style: The function 'fe_cfunc' is never used. [unusedFunction]
+
+^
+src/fe.c:829:0: style: The function 'fe_close' is never used. [unusedFunction]
+
+^
+src/fe.c:129:0: style: The function 'fe_isnil' is never used. [unusedFunction]
+
+^
+src/fe.c:321:0: style: The function 'fe_list' is never used. [unusedFunction]
+
+^
+src/fe.c:313:0: style: The function 'fe_ptr' is never used. [unusedFunction]
+
+^
+src/fe.c:432:0: style: The function 'fe_toptr' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
